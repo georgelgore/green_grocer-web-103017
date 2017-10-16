@@ -3,7 +3,7 @@ def consolidate_cart(cart)
 
   cart.each do |items|
     items.each do |item, info_hash|
-      if merged_hash[item] == 0 
+      if merged_hash[item] == 0
         merged_hash[item] = info_hash
         merged_hash[item][:count] = 0
       end
@@ -16,13 +16,13 @@ end
 #   count = 0
 #   hash1 = Hash.new(0)
 #   final_hash = {}
-# 
+#
 #   cart.each do |items|
 #     items.each do |name, info_hash|
 #       hash1[name] += 1
 #     end
 #   end
-# 
+#
 #   new_cart = cart.uniq!
 #   new_cart.each do |item|
 #     item.each do |name, info_hash|
@@ -31,9 +31,9 @@ end
 #        final_hash.merge!(item)
 #    end
 # end
-# 
+#
 # new_cart
-# 
+#
 # end
 
   # code here
