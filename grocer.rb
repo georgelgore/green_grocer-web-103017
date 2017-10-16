@@ -17,13 +17,11 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  puts  consolidate_cart(cart)
-
-  # coupons.each do |coupon|
-  #   food = coupon[:item]
-  #   merged["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => cart[food][:clearance], :count => (merged[food][:count] - coupon[:num]) }
-  # end
-  # p merged
+  coupons.each do |coupon|
+    food = coupon[:item]
+    cart["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => cart[food][:clearance], :count => (cart[food][:count] - coupon[:num]) }
+  end
+  p cart
   #  ,
 
 end
