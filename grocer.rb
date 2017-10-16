@@ -17,7 +17,7 @@ end
 
 def apply_coupons(cart, coupons)
   puts coupons
-  name = "#{coupons[:item]} W/COUPON"
+  name = "#{coupons[:item].to_s} W/COUPON"
   cart[name] = coupons 
   # code here
 end
