@@ -16,10 +16,11 @@ end
 
 
 def apply_coupons(cart, coupons)
-  puts coupons
-  name = "#{coupons[:item].to_s} W/COUPON"
-  cart[name] = coupons
   # code here
+  coupons.each do |coupon|
+    cart["#{coupon[:item]} W/COUPON"]
+  end
+  cart
 end
 
 def apply_clearance(cart)
