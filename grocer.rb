@@ -22,7 +22,7 @@ def apply_coupons(cart, coupons)
     food = coupon[:item]
     merged["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => cart[food][:clearance], :count => (merged[food][:count] - coupon[:num]) }
   end
-  p cart
+  p merged
   #  ,
 
 end
