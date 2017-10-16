@@ -1,10 +1,10 @@
 def consolidate_cart(cart)
   # code here
   count = {:count => 0}
-  items = cart.keys
+
   hash = Hash.new(0)
 
-  items.each do |item|
+  cart.each do |item|
     hash[item] += 1
   end
 
