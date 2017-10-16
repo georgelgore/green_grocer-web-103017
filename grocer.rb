@@ -24,7 +24,7 @@ def apply_coupons(cart, coupons)
     # (cart[food][:count] - coupon[:num])
     cart[food][:count] = cart[food][:count] - coupon[:num]
   end
-  cart
+  new_hash
   #  ,
 
 end
