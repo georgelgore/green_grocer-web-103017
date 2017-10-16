@@ -17,9 +17,10 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  new_hash = {}
   coupons.each do |coupon|
     food = coupon[:item]
-    cart["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => cart[food][:clearance], :count => (coupon[:num] - 1)}
+    new_hash["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => cart[food][:clearance], :count => (coupon[:num] - 1)}
     # (cart[food][:count] - coupon[:num])
     cart[food][:count] = cart[food][:count] - coupon[:num]
   end
@@ -30,6 +31,11 @@ end
 
 def apply_clearance(cart)
   # code here
+  cart.map! do |item, item_info|
+    if item_info[:clearance] == true
+      item_info[:price] = (item_info[:price] - (item_info[:price] * .2))
+    end  
+  end
 end
 
 def checkout(cart, coupons)
