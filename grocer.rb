@@ -18,9 +18,10 @@ end
 def apply_coupons(cart, coupons)
   # code here
   coupons.each do |coupon|
-    cart["#{coupon[:item]} W/COUPON"] = {:price => coupon[:cost], :clearance => cart[:item][:clearance], :count => (cart[:item][:count] - coupon[:num])}
+    cart["#{coupon[:item]} W/COUPON"] = {:price => coupon[:cost]}
   end
   p cart
+  # , :clearance => cart[:item][:clearance], :count => (cart[:item][:count] - coupon[:num])
 
 end
 
