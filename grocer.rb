@@ -18,19 +18,19 @@ new_cart.each do |item|
 end
 
 new_cart
-  
+
 end
 
   # code here
   # count = {:count => 0}
-  # 
+  #
   # hash = Hash.new(0)
   # output_hash = {}
-  # 
+  #
   # cart.each do |item|
   #   hash[item] += 1
   # end
-  # 
+  #
   # hash.each do |hash1|
   #   hash1.each do |hash2,count|
   #     hash2.keys[:count] = count
@@ -40,7 +40,7 @@ end
   #   item_info <<
   # end
 #   hash
-# 
+#
 # end
 
 def apply_coupons(cart, coupons)
