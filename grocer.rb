@@ -1,20 +1,21 @@
 def consolidate_cart(cart)
   count = 0
-hash1 = Hash.new(0)
-final_hash = {}
+  hash1 = Hash.new(0)
+  final_hash = {}
 
-cart.each do |items|
-  items.each do |name, info_hash|
-    hash1[name] += 1
+  cart.each do |items|
+    items.each do |name, info_hash|
+      hash1[name] += 1
+    end
   end
-end
 
-new_cart = cart.uniq!
-new_cart.each do |item|
-  item.each do |name, info_hash|
-      new_info = {:count => hash1[name]}
-     info_hash.merge!(new_info)
- end
+  new_cart = cart.uniq!
+  new_cart.each do |item|
+    item.each do |name, info_hash|
+        new_info = {:count => hash1[name]}
+       info_hash.merge!(new_info)
+       final_hash.merge!(item)
+   end
 end
 
 new_cart
