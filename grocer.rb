@@ -3,15 +3,19 @@ def consolidate_cart(cart)
   count = {:count => 0}
 
   hash = Hash.new(0)
+  output_hash = {}
 
   cart.each do |item|
     hash[item] += 1
   end
 
-  puts hash
+  hash.each do |hash, count|
+    hash.keys[:count] = count
+  end
   # cart.each do |item, item_info|
   #   item_info <<
   # end
+  hash
 
 end
 
