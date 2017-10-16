@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     cart["#{coupon[:item]} W/COUPON"] = {}
   end
-  cart
+  p cart
 end
 
 def apply_clearance(cart)
