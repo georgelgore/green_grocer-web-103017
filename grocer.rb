@@ -30,7 +30,7 @@ end
 
 def apply_clearance(cart)
   # code here
-  cart.map! do |item, item_info|
+  cart.each do |item, item_info|
     if item_info[:clearance] == true
       p item_info[:price]
     end
