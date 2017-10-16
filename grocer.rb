@@ -18,7 +18,7 @@ end
 def apply_coupons(cart, coupons)
   # code here
   coupons.each do |coupon|
-    cart["#{coupon[:item]} W/COUPON"]
+    cart["#{coupon[:item]} W/COUPON"] = {}
   end
   cart
 end
