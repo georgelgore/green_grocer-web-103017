@@ -33,8 +33,8 @@ def apply_clearance(cart)
   # code here
   cart.map! do |item, item_info|
     if item_info[:clearance] == true
-      item_info[:price] = (item_info[:price] - (item_info[:price] * .2))
-    end  
+      item_info[:price] = (item_info[:price] - (item_info[:price] * 0.2))
+    end
   end
 end
 
