@@ -17,7 +17,7 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  p  consolidate_cart(cart)
+  puts  consolidate_cart(cart)
 
   # coupons.each do |coupon|
   #   food = coupon[:item]
