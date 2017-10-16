@@ -32,7 +32,7 @@ def apply_clearance(cart)
   # code here
   cart.each do |item, item_info|
     if item_info[:clearance] == true
-      p item_info[:price]
+      p item_info[:price] = (item_info[:price]/.2)
     end
   end
 end
