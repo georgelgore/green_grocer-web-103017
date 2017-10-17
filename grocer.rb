@@ -32,8 +32,8 @@ def apply_clearance(cart)
   # code here
   # cart.each do |item, item_info|
   #   if item_info[:clearance] == true
-  #     amount_off =  
-  #     item_info[:price].percent(20) 
+  #     amount_off =
+  #     item_info[:price].percent(20)
   #   end
   # end
   cart.map do |item, item_info|
