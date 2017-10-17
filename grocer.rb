@@ -31,10 +31,8 @@ end
 def apply_clearance(cart)
   # code here
   cart.each do |hash|
-    p hash
-    hash.each do |item|
-      p item
-    end
+    p hash.last[:clearance]
+
   end
 end
 
