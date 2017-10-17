@@ -33,7 +33,7 @@ def apply_clearance(cart)
   cart.each do |items|
     items.each do |item, item_hash|
       if cart[item][:clearance] == true
-          cart[item][:price] = cart[item][:price] * (20/100)
+          cart[item][:price] = (cart[item][:price] * (20/100))
       end
     end
   end
