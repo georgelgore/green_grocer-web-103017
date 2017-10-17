@@ -30,11 +30,12 @@ end
 
 def apply_clearance(cart)
   # code here
-  cart.map! do |hash|
-    if hash.last[:clearance] == true
-      p hash.last[:price] * (0.8)
+  cart.map do |hash, info_hash|
+    if info_hash[:clearance] == true
+      info_hash[:price] = info_hash[:price] * (0.8)
     end
   end
+  cart
 end
 
 
