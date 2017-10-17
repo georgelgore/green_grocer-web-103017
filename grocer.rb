@@ -31,8 +31,9 @@ end
 def apply_clearance(cart)
   # code here
   cart.each do |hash|
-    p hash.last[:clearance]
-
+    if hash.last[:clearance] == true
+      hash.last[:price] = hash.last[:price] * (20/100)
+    end
   end
 end
 
