@@ -30,18 +30,26 @@ end
 
 def apply_clearance(cart)
   # code here
+  cart.each do |items|
+    items.each do |item, item_hash|
+      if cart[item][:clearance] == true
+          cart[item][:price] = cart[item][:price] * (20/100)
+      end
+    end
+  end
+end
   # cart.each do |item, item_info|
   #   if item_info[:clearance] == true
   #     amount_off =
   #     item_info[:price].percent(20)
   #   end
   # end
-  cart.map do |item, item_info|
-    if item_info[:clearance] == true
-      cart[:item][item_info][:price] * (20/100)
-    end
-  end
-end
+  # cart.map do |item, item_info|
+  #   if item_info[:clearance] == true
+  #     cart[:item][item_info][:price] * (20/100)
+  #   end
+  # end
+# end
 
 def checkout(cart, coupons)
   # code here
