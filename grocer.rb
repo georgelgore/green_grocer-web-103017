@@ -32,7 +32,7 @@ def apply_clearance(cart)
   # code here
   cart.each do |hash|
     hash.each do |item, item_hash|
-      p item
+      p item[:clearance]
     end
   end
 end
