@@ -38,7 +38,7 @@ def apply_clearance(cart)
   # end
   cart.map do |item, item_info|
     if item_info[:clearance] == true
-      item_info[:price] * (20/100)
+      cart[:item][item_info][:price] * (20/100)
     end
   end
 end
